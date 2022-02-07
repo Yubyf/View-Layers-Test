@@ -121,10 +121,20 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="reset bitmap"
-        app:layout_constraintBottom_toTopOf="@+id/btn_clear_bitmap_pixels"
+        app:layout_constraintBottom_toTopOf="@+id/btn_modify_bitmap_pixels"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radio_group_layer_types" />
+
+    <Button
+        android:id="@+id/btn_modify_bitmap_pixels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="modify bitmap pixels"
+        app:layout_constraintBottom_toTopOf="@+id/btn_clear_bitmap_pixels"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_reset_bitmap" />
 
     <Button
         android:id="@+id/btn_clear_bitmap_pixels"
@@ -134,6 +144,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_reset_bitmap" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_modify_bitmap_pixels" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

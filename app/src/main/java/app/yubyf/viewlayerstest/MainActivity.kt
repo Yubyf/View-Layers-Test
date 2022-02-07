@@ -2,6 +2,8 @@ package app.yubyf.viewlayerstest
 
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -67,8 +69,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         findViewById<Button>(R.id.btn_reset_bitmap).setOnClickListener {
+            modifiedBitmapCanvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR)
             modifiedBitmapCanvas.drawBitmap(bitmap, 0F, 0F, null)
             layerTestView.bitmap = modifiedBitmap
+        }
+        findViewById<Button>(R.id.btn_modify_bitmap_pixels).setOnClickListener {
+            layerTestView.modifyBitmapPixels()
         }
         findViewById<Button>(R.id.btn_clear_bitmap_pixels).setOnClickListener {
             layerTestView.clearBitmapPixels()

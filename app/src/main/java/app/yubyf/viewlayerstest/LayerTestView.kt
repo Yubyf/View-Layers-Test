@@ -54,6 +54,17 @@ class LayerTestView @JvmOverloads constructor(
         onLayerTypeChanged?.let { it(this.layerType) }
     }
 
+    fun modifyBitmapPixels() {
+        bitmapCanvas?.run {
+            drawCircle(this.width / 2F, this.height / 2F, this.width / 8F,
+                Paint().also {
+                    it.color = Color.RED
+                    it.style = Paint.Style.FILL
+                }
+            )
+        }
+    }
+
     fun clearBitmapPixels() {
         bitmapCanvas?.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR)
     }
